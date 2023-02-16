@@ -6,3 +6,6 @@ CREATE TABLE `Cliente` (
   `endereco` TEXT,
   `telefone` VARCHAR(15)
 );
+
+
+INSERT INTO `Cliente` (nome,email,endereco,telefone) VALUES("Leonardo","leozinhodazonasul@gmail.com", "rua Jose Maria","119312-3151")
