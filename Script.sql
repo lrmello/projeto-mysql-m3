@@ -1,0 +1,1 @@
+CREATE SCHEMA `restaurant_db`;
