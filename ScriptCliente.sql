@@ -8,7 +8,18 @@ CREATE TABLE `Cliente` (
 );
 
 
-INSERT INTO `Cliente` (nome,email,endereco,telefone) VALUES
+INSERT INTO `Cliente` (nome,endereco,email,telefone) VALUES
+("Leonardo","leozinhodazonasul@email.com", "rua Jose Maria","(11) 9312-3151"),
+('Douglas Almeida Alves','douglas@email.com','Rua 113, 1723' , '(11) 7510-5760'),
+('Marina Cardoso Barbosa','maria@emai.com', 'Alameda Cantão, 1971', '(21) 6543-1805'),
+('Fernanda Carvalho Martins','fernanda@email.com', 'Rua Malaquias, 1798','(64) 8731-9887'),
+('Igor Ferreira Costa','igor@emial.com','Passagem Palheta, 695', '(91) 9703-8242'),
+('André Cavalcanti Silva', 'andre@email.com', 'Rua Maria Adelaide, 198', '(31) 3602-5222'),
+('Anna Goncalves Azevedo', 'anna@email.com', 'Avenida Leste, 142', '(92) 4424-2335'),
+('Rafaela Cunha Lima', 'rafaela@email.com', 'Avenida dos Boiadeiros, 340', '(34) 5054-8032'),
+('Beatrice Souza Cunha', 'bea@email.com', 'Praça Itália, 1943', '(41) 4018-6128'),
+('Sophia Pereira Silva', 'soph@email.com', 'Rua Maria da Penha Farias, 1195', '(83) 2925-9802'),
+('Carla Sousa Rocha', 'carlinha@email.com', 'Rua José Américo de Almeida, 1457', '(41) 7008-8625'),
 ("Jubileu Mendes","pipoca@gmail.com", "rua Jose Maria,34","(11)9312-3151"),
 ("Isabela Goncalves Lima","IsabelaGoncalvesLima@armyspy.com ", "Avenida Jequitibá, 1662 Valinhos SP 13272-170 ","(19) 6160-4795"),
 ("Bruna Santos Melo","BrunaSantosMelo@jourrapide.com ", "Avenida Ipiranga, 1877 Vila Velha-ES 29125-350","(27) 6971-9485"),
