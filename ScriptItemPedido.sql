@@ -2,11 +2,11 @@ CREATE TABLE `ItemPedido` (
   `id_pedido` INT,
   `id_produto` INT,
   `quantidade` INT,
-  `preco_unitario` DECIMAL(10,2)
 );
 
+ALTER TABLE `ItemPedido` ADD FOREIGN KEY (`id_produto`) REFERENCES `Produto` (`id_produto`)
 
--- INSERT INTO `ItemPedido` (id_produto, quantidade, preco_unitario) VALUES
+-- INSERT INTO `ItemPedido` (id_produto, quantidade) VALUES
 -- (11, 1, 90.00 ),
 -- (11, 2, 90.00 ),
 -- (12, 5, 85.00 ),
