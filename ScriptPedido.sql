@@ -1,36 +1,25 @@
-CREATE TABLE `Pedido` (
-  `id_pedido` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `data` DATE,
-  `id_cliente` INT
-);
+-- Insere os pedidos na Tabela Pedidos
 
-ALTER TABLE `Pedido` ADD FOREIGN KEY (`id_cliente`) REFERENCES `Cliente` (`id_cliente`);
-
-INSERT INTO Pedido ('data', 'id_cliente') VALUES
-('2022-01-31', 3),
-('2022-02-28', 6),
-('2022-02-28', 2),
-('2022-04-12', 1),
-('2022-05-01', 4),
-('2022-05-01', 20),
-('2022-05-05', 1),
-('2022-06-07', 10),
-('2022-08-28', 12),
-('2022-10-12', 5),
-('2022-10-12', 7),
-('2022-10-13', 8),
-('2022-11-01', 9),
-('2022-11-05', 11),
-('2022-11-15', 13),
-('2022-11-20', 14),
-('2022-11-20', 15),
-('2022-11-20', 16),
-('2022-11-22', 5),
-('2022-11-22', 17),
-('2022-12-01', 18),
-('2022-12-01', 19),
-('2022-12-01', 20);
-
-
-
-
+INSERT INTO Pedidos(data, id_cliente, end_entrega, frete) VALUES
+('2022-01-01', 1, (select endereco from Clientes where id = 1), 10.00),
+('2022-01-01', 2, (select endereco from Clientes where id = 2), 10.00),
+('2022-01-01', 3, (select endereco from Clientes where id = 3), 10.00),
+('2022-02-05', 4, (select endereco from Clientes where id = 4), 10.00),
+('2022-02-05', 5, (select endereco from Clientes where id = 5), 10.00),
+('2022-02-05', 6, (select endereco from Clientes where id = 6), 10.00),
+('2022-02-07', 7, (select endereco from Clientes where id = 7), 10.00),
+('2022-02-07', 8, (select endereco from Clientes where id = 8), 10.00),
+('2022-02-10', 9, (select endereco from Clientes where id = 9), 10.00),
+('2022-02-10', 10, (select endereco from Clientes where id = 10), 10.00),
+('2022-02-21', 11, (select endereco from Clientes where id = 11), 10.00),
+('2022-02-21', 12, (select endereco from Clientes where id = 12), 10.00),
+('2022-03-01', 13, (select endereco from Clientes where id = 13), 10.00),
+('2022-03-01', 14, (select endereco from Clientes where id = 14), 10.00),
+('2022-03-01', 15, (select endereco from Clientes where id = 15), 10.00),
+('2022-03-11', 16, (select endereco from Clientes where id = 16), 10.00),
+('2022-03-11', 17, (select endereco from Clientes where id = 17), 10.00),
+('2022-04-10', 18, (select endereco from Clientes where id = 18), 10.00),
+('2022-04-10', 19, (select endereco from Clientes where id = 19), 10.00),
+('2022-05-10', 20, (select endereco from Clientes where id = 20), 10.00),
+('2022-05-10', 3, (select endereco from Clientes where id = 3), 10.00),
+('2022-05-10', 7, (select endereco from Clientes where id = 7), 10.00),

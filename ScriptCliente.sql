@@ -1,13 +1,4 @@
-
-CREATE TABLE `Cliente` (
-  `id_cliente` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(255),
-  `email` VARCHAR(255) UNIQUE,
-  `endereco` TEXT,
-  `telefone` VARCHAR(15)
-);
-
-
+-- 1 Insert para os clientes
 INSERT INTO `Cliente` (nome,endereco,email,telefone) VALUES
 ("Leonardo","leozinhodazonasul@email.com", "rua Jose Maria","(11) 9312-3151"),
 ('Douglas Almeida Alves','douglas@email.com','Rua 113, 1723' , '(11) 7510-5760'),

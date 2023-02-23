@@ -1,10 +1,5 @@
-CREATE TABLE `Produto` (
-  `id_produto` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(255),
-  `descricao` TEXT,
-  `preco` DECIMAL(10,2),
-  `estoque` INT
-);
+
+-- 2 Insere os itens na tabela de Produtos
 
 INSERT INTO Produto (nome, descricao, preco, estoque) VALUES
 ('X-Burguer', 'Pão, maionese caseira, hambúrger artesanal 180g e queijo prato', 29.00, 30),
