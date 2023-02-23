@@ -1,5 +1,5 @@
-CREATE SCHEMA `restaurant_db`;
-USE `restaurant_db`;
+CREATE SCHEMA `lanchonete_db`;
+USE `lanchonete_db`;
 
 -- Criando tabela para clientes
 CREATE TABLE IF NOT EXISTS Clientes (
