@@ -1,7 +1,7 @@
 CREATE TABLE `ItemPedido` (
   `id_pedido` INT,
   `id_produto` INT,
-  `quantidade` INT,
+  `quantidade` INT
 );
 
 ALTER TABLE `ItemPedido` ADD FOREIGN KEY (`id_produto`) REFERENCES `Produto` (`id_produto`)
