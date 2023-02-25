@@ -1,4 +1,4 @@
-# Projetodo Módulo 3 do Curso de Desenvolvimento WEB Full-Stack da Resilia Educação - Banco de Dados MySQL :computer:
+# Projeto do Módulo 3 do Curso de Desenvolvimento WEB Full-Stack da Resilia Educação - Banco de Dados MySQL :computer:
 
 # 📋 Descrição
 
