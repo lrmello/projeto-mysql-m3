@@ -13,15 +13,63 @@
 <p style="font-size: 16px">Com as tabelas alimentadas com os dados, podemos responder as seguintes perguntas que o dono do comércio pode ter como por exemplo: </p>
 <p style="font-size: 16px">Quanto cada cliente gastou? Em ordem do maior gasto para o menor gasto.</p>
 
-![image](https://user-images.githubusercontent.com/118377204/221605713-5a37d5ea-9b3c-4e5f-b6fe-11176a51ae69.png)
-
+```
+select * from  gasto_total_por_cliente
+```
 <p style="font-size: 16px">Quanto foi vendido de cada item? Em ordem do mais vendido para o menos vendido.</p>
 
-![image](https://user-images.githubusercontent.com/118377204/221606029-24d3cf96-ee7a-4e8a-830c-6fd66b7a335d.png)
 
-<p style="font-size: 16px">Quantos produtos foram vendidos no ano? Ordenado por data</p>
-<p style="font-size: 16px">.</p>
-<p style="font-size: 16px">.</p>
+```
+select * from total_produtos_vendidos 
+```
+
+<p style="font-size: 16px">Listar pedidos por datas.</p>
+
+```
+call PedidosPorData()
+```
+
+<p style="font-size: 16px">Listar pedidos por cliente.</p>
+
+```
+call PedidosPorCliente()
+```
+
+<p style="font-size: 16px">Listar pedidos por produto.</p>
+
+```
+call PedidosPorProduto()
+```
+
+<p style="font-size: 16px">Listar pedidos por data e cliente.</p>
+
+```
+call PedidosPorDataCliente()
+```
+
+<p style="font-size: 16px">Listar pedidos por data e produto.</p>
+
+```
+call PedidosPorDataProduto()
+```
+
+<p style="font-size: 16px">Listar produtos mais vendidos por período.</p>
+
+```
+call ProdutosMaisVendidosPorPeriodo()
+```
+
+<p style="font-size: 16px">Listar produtos menos vendidos por período.</p>
+
+```
+call MenosVendidosPorPeriodo()
+```
+
+<p style="font-size: 16px">Resumo venda por clientes.</p>
+
+```
+call ResumoVendasPorCliente()
+```
 
 # 🔧 Tecnologias e ferramentas utilizadas
 
