@@ -80,7 +80,7 @@ call ResumoVendasPorCliente(15);
 <p style="font-size: 16px">Inserir novo cliente: <b>InserirNovoCliente(nome, email, endereco, telefone)</b></p>
 
 ```sql
-call InserirNovoCliente('Vinicius Caetano', 'Vinicius@Email.com', 'Rua sem nome, 485, São Paulo/SP', '(11) 99999-9999');
+call InserirNovoCliente('Ligia Maria', 'ligia@Email.com', 'Rua sem nome, 485, São Paulo/SP', '(11) 99999-9999');
 ```
 
 <p style="font-size: 16px">Inserir novo Pedido: <b>InserirNovoPedido(idCliente, vlrFrete, idProduto, qtdProduto)</b></p>
