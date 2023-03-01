@@ -1,5 +1,5 @@
 -- 1 Insert para os clientes
-INSERT INTO `Cliente` (nome,email,endereco,telefone) VALUES
+INSERT INTO `Clientes` (nome,email,endereco,telefone) VALUES
 ("Leonardo","leozinhodazonasul@email.com", "rua Jose Maria","(21) 9312-3151"),
 ('Douglas Almeida Alves','douglas@email.com','Rua 113, 1723' , '(21) 7510-5760'),
 ('Marina Cardoso Barbosa','maria@emai.com', 'Alameda Cantão, 1971', '(21) 6543-1805'),

@@ -4,7 +4,7 @@
 INSERT INTO Produto (nome, descricao, preco, estoque) VALUES
 ('X-Burguer', 'Pão, maionese caseira, hambúrger artesanal 180g e queijo prato', 29.00, 30),
 ('X-Bacon', 'Pão, maionese caseira, hambúrguer artesanal 180g, queijo prato e bacon', 35.00, 25),
-('X-Saldada', 'Pão, maionese caseira, hambúrguer artesanal 180g, queijo prato, alface e tomate', 33.00, 25),
+('X-Salada', 'Pão, maionese caseira, hambúrguer artesanal 180g, queijo prato, alface e tomate', 33.00, 25),
 ('Frango Caipira', 'Pão, maionese caseira, sobrecoxa desossada, cream cheese, alface e tomate', 35.00, 20),
 ('Cheddar', 'Pão, maionese caseira, hambúrguer artesanal 180g, cheddar fundido, bacon e cebola caramelizada', 43.00, 30),
 ('X-Linguiça', 'Pão francês, maionese caseira, linguiça bragantina, queijo prato e vinagrete', 30.00, 20),
