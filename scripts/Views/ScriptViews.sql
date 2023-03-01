@@ -1,4 +1,3 @@
--- ==================== VIEWS ====================
 -- View para listar todos os pedidos
 CREATE VIEW listar_Todos_Os_Pedidos AS
     SELECT 
