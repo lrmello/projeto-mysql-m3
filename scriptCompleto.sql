@@ -118,7 +118,7 @@ declare clienteCadastrado BOOLEAN;
 SET clienteCadastrado = (SELECT count(*) FROM Clientes WHERE id = idCliente);
 return clienteCadastrado;
 END;
-
+$$
 
 -- ==================== PROCEDURES ====================
 -- Proc para gerar pedidos ao criar o banco
@@ -150,6 +150,7 @@ UPDATE Produtos SET estoque = estoque - randQtd WHERE id = randProduct;
 SET i = i + 1;
 END WHILE;
 END;
+$$
 
 -- Proc para Lista Pedidos por data
 CREATE PROCEDURE PedidosPorData(IN dataInicio DATE, IN dataFim DATE)
@@ -158,6 +159,7 @@ SELECT p.id as 'N° Pedido', p.data as 'Data Pedido', c.nome as 'Cliente' , p.to
 inner join Clientes c on c.id = p.id_cliente
 WHERE p.data between dataInicio and dataFim;
 END;
+$$
 
 -- Proc para Lista Pedidos por Cliente
 CREATE PROCEDURE PedidosPorCliente(IN idCliente INT)
@@ -166,6 +168,7 @@ SELECT p.id as 'N° Pedido', p.data as 'Data Pedido', c.nome as 'Cliente' , p.to
 inner join Clientes c on c.id = p.id_cliente
 WHERE c.id = idCliente;
 END;
+$$
 
 -- Proc para Lista Pedidos por Produto
 CREATE PROCEDURE PedidosPorProduto(IN idProduto INT)
@@ -175,6 +178,7 @@ inner join Clientes c on c.id = p.id_cliente
 inner join ItemPedido ip on ip.id_pedido = p.id
 WHERE ip.id_produto = idProduto;
 END;
+$$
 
 -- Proc para Lista Pedidos por Cliente e Data
 CREATE PROCEDURE PedidosPorDataCliente(IN dataInicio DATE, IN dataFim DATE, IN idCliente INT)
@@ -183,6 +187,7 @@ SELECT p.id as 'N° Pedido', p.data as 'Data Pedido', c.nome as 'Cliente' , p.to
 inner join Clientes c on c.id = p.id_cliente
 WHERE p.data between dataInicio and dataFim and c.id = idCliente;
 END;
+$$
 
 -- Proc para Lista Pedidos por Produto e Data
 CREATE PROCEDURE PedidosPorDataProduto(IN dataInicio DATE, IN dataFim DATE, IN idProduto INT)
@@ -192,6 +197,7 @@ inner join Clientes c on c.id = p.id_cliente
 inner join ItemPedido ip on ip.id_pedido = p.id
 WHERE p.data between dataInicio and dataFim and ip.id_produto = idProduto;
 END;
+$$
 
 -- Proc para listar os produtos mais vendidos
 CREATE PROCEDURE ProdutosMaisVendidosPorPeriodo(IN dataInicio DATE, IN dataFim DATE)
@@ -203,9 +209,10 @@ WHERE ped.data between dataInicio and dataFim
 group by p.nome
 order by sum(ip.quantidade) desc;
 END;
+$$
 
 -- Proc para listar os produtos menos vendidos
-CREATE PROCEDURE MenosVendidosPorPeriodo(IN dataInicio DATE, IN dataFim DATE)
+CREATE PROCEDURE ProdutosMenosVendidosPorPeriodo(IN dataInicio DATE, IN dataFim DATE)
 BEGIN
 SELECT p.nome as 'Produto', sum(ip.quantidade) as 'Quantidade Vendida' FROM Produtos p
 inner join ItemPedido ip on ip.id_produto = p.id
@@ -214,6 +221,7 @@ WHERE ped.data between dataInicio and dataFim
 group by p.nome
 order by sum(ip.quantidade) asc;
 END;
+$$
 
 -- Proc para retornar um resumo de vendas por cliente
 CREATE PROCEDURE ResumoVendasPorCliente(IN idCliente INT)
@@ -223,6 +231,7 @@ inner join Pedidos p on p.id_cliente = c.id
 WHERE c.id = idCliente
 group by c.nome;
 END;
+$$
 
 -- Proc para inserir novo pedido
 CREATE PROCEDURE InserirNovoPedido(IN idCliente INT, IN frete DECIMAL(10,2), IN idProduto INT, IN qtd INT)
@@ -249,6 +258,7 @@ UPDATE Produtos SET estoque = estoque - qtd WHERE id = idProduto;
 
 SELECT * FROM Pedidos WHERE id = (SELECT max(id) FROM Pedidos);
 END;
+$$
 
 -- Proc para inserir novo cliente
 CREATE PROCEDURE InserirNovoCliente(IN nome VARCHAR(255),IN email VARCHAR(255),IN endereco VARCHAR(255),IN telefone VARCHAR(15))

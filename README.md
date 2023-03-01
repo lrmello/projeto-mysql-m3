@@ -9,66 +9,68 @@
 
 <img>![dbDiagram](https://user-images.githubusercontent.com/118377204/221215116-ba339d79-a04d-4092-8fdd-7ab20a4de3ee.png)</img>
 
-# 📑 Perguntas:
+# 📑 Algumas Perguntas:
 <p style="font-size: 16px">Com as tabelas alimentadas com os dados, podemos responder as seguintes perguntas que o dono do comércio pode ter como por exemplo: </p>
 <p style="font-size: 16px">Quanto cada cliente gastou? Em ordem do maior gasto para o menor gasto.</p>
 
-```
+```sql
 select * from  gasto_total_por_cliente
 ```
 <p style="font-size: 16px">Quanto foi vendido de cada item? Em ordem do mais vendido para o menos vendido.</p>
 
 
-```
+```sql
 select * from total_produtos_vendidos 
 ```
 
-<p style="font-size: 16px">Listar pedidos por datas.</p>
+<p style="font-size: 16px">Listar pedidos por datas: <b>PedidosPorData(dataInicio, dataFim)</b></p>
 
-```
-call PedidosPorData(IN dataInicio DATE, IN dataFim DATE)
-```
-
-<p style="font-size: 16px">Listar pedidos por cliente.</p>
-
-```
-call PedidosPorCliente()
+```sql
+call PedidosPorData('2023-02-01', '2023-02-28');
 ```
 
-<p style="font-size: 16px">Listar pedidos por produto.</p>
+<p style="font-size: 16px">Listar pedidos por cliente: <b>PedidosPorCliente(idCliente)</b></p>
+
+```sql
+call PedidosPorCliente(2);
 
 ```
-call PedidosPorProduto()
+
+<p style="font-size: 16px">Listar pedidos por produto: <b>PedidosPorProduto(idProduto)</b></p>
+
+```sql
+call PedidosPorProduto(1);
 ```
 
-<p style="font-size: 16px">Listar pedidos por data e cliente.</p>
+<p style="font-size: 16px">Listar pedidos por data e cliente: <b>PedidosPorDataCliente(dataInicio, dataFim, idCliente)</b></p>
 
-```
-call PedidosPorDataCliente()
-```
-
-<p style="font-size: 16px">Listar pedidos por data e produto.</p>
-
-```
-call PedidosPorDataProduto()
+```sql
+call PedidosPorDataCliente('2023-02-01', '2023-02-28', 1);
 ```
 
-<p style="font-size: 16px">Listar produtos mais vendidos por período.</p>
+<p style="font-size: 16px">Listar pedidos por data e produto:<b>PedidosPorDataProduto(dataInicio, dataFim, idProduto)</b></p>
 
-```
-call ProdutosMaisVendidosPorPeriodo()
-```
-
-<p style="font-size: 16px">Listar produtos menos vendidos por período.</p>
-
-```
-call MenosVendidosPorPeriodo()
+```sql
+call PedidosPorDataProduto('2023-02-20', '2023-02-28', 5);
 ```
 
-<p style="font-size: 16px">Resumo venda por clientes.</p>
+<p style="font-size: 16px">Listar produtos mais vendidos por período: <b>ProdutosMaisVendidosPorPeriodo(dataInicio, dataFim)</b></p>
+
+```sql
+call ProdutosMaisVendidosPorPeriodo('2023-02-01', '2023-02-28');
+```
+
+<p style="font-size: 16px">Listar produtos menos vendidos por período: <b>ProdutosMenosVendidosPorPeriodo(dataInicio, dataFim)</b></p>
+
+```sql
+call ProdutosMenosVendidosPorPeriodo('2023-02-01', '2023-02-15');
 
 ```
-call ResumoVendasPorCliente()
+
+<p style="font-size: 16px">Resumo venda por clientes: <b>ResumoVendasPorCliente(idCliente)</b></p>
+
+```sql
+call ResumoVendasPorCliente(15);
 ```
 
 # 🔧 Tecnologias e ferramentas utilizadas
