@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS Clientes (
 );
 
 -- Criando tabela para produtos
-CREATE TABLE IF NOT EXISTS `Produto` (
+CREATE TABLE IF NOT EXISTS Produtos (
   `id` INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(255),
   `descricao` TEXT,
@@ -38,7 +38,5 @@ CREATE TABLE IF NOT EXISTS ItemPedido (
   quantidade INT UNSIGNED NOT NULL,
   PRIMARY KEY (id_pedido, id_produto),
   FOREIGN KEY (id_pedido) REFERENCES Pedidos(id),
-  FOREIGN KEY (id_produto) REFERENCES Produto(id)
+  FOREIGN KEY (id_produto) REFERENCES Produtos(id)
 );
-
-
