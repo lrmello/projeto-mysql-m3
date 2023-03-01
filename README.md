@@ -9,8 +9,12 @@
 
 <img>![dbDiagram](https://user-images.githubusercontent.com/118377204/221215116-ba339d79-a04d-4092-8fdd-7ab20a4de3ee.png)</img>
 
+# 📝 Importando o banco de dados
+<p style="font-size: 16px"> Utilize o arquivo <b>lanchonete_db.sql</b> através da ferramenta <b>DATA IMPORT</b> do Mysql Workbench para importar o banco de dados.</p>
+<br>
+
 # 📑 Algumas Perguntas:
-<p style="font-size: 16px">Com as tabelas alimentadas com os dados, podemos responder as seguintes perguntas que o dono do comércio pode ter como por exemplo: </p>
+<p style="font-size: 16px"> Com as tabelas alimentadas com os dados, podemos responder as seguintes perguntas que o dono do comércio pode ter como por exemplo: </p>
 <p style="font-size: 16px">Quanto cada cliente gastou? Em ordem do maior gasto para o menor gasto.</p>
 
 ```sql
