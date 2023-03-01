@@ -26,7 +26,7 @@ select * from total_produtos_vendidos
 <p style="font-size: 16px">Listar pedidos por datas.</p>
 
 ```
-call PedidosPorData()
+call PedidosPorData(IN dataInicio DATE, IN dataFim DATE)
 ```
 
 <p style="font-size: 16px">Listar pedidos por cliente.</p>
