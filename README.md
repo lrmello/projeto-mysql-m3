@@ -73,6 +73,18 @@ call ProdutosMenosVendidosPorPeriodo('2023-02-01', '2023-02-15');
 call ResumoVendasPorCliente(15);
 ```
 
+<p style="font-size: 16px">Inserir novo cliente: <b>InserirNovoCliente(nome, email, endereco, telefone)</b></p>
+
+```sql
+call InserirNovoCliente('Vinicius Caetano', 'Vinicius@Email.com', 'Rua sem nome, 485, São Paulo/SP', '(11) 99999-9999');
+```
+
+<p style="font-size: 16px">Inserir novo Pedido: <b>InserirNovoPedido(idCliente, vlrFrete, idProduto, qtdProduto)</b></p>
+
+```sql
+call InserirNovoPedido(2, 10.00, 1, 2);
+```
+
 # 🔧 Tecnologias e ferramentas utilizadas
 
 <div align="center" style="display: inline_block;"><br>
