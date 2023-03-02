@@ -1,5 +1,8 @@
 # Projeto do Módulo 3 do Curso de Desenvolvimento WEB Full-Stack da Resilia Educação - RD - Banco de Dados MySQL :computer:
 
+![image](https://user-images.githubusercontent.com/118377204/222522407-8511ba05-841a-4f50-9f57-91553706f607.png)
+
+
 # 📋 Descrição
 
 <p style="font-size: 16px">O projeto teve como objetivo a criação de um banco de dados para um E-commerce, que o tema escolhido foi uma lanchonete. Fizemos a modelagem utilizando o DB-Diagram e posteriormente criamos os scripts para a criação de tabelas (CREATE TABLE), a inserções dos elementos dentro de cada tabela (INSERT INTO), e a atualização das tabelas (UPDATE).</p>
